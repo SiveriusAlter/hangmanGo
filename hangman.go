@@ -1,4 +1,4 @@
-package main
+package hangman
 
 import (
 	"fmt"
@@ -15,7 +15,7 @@ func main() {
 func getLetter() string {
 	var letter string
 	for {
-		fmt.Println("Введите одну букву на русском языке: ")
+		fmt.Println("Введите одну букву на русском языке:")
 		fmt.Scan(&letter)
 		if utf8.RuneCountInString(letter) == 1 && checkString(letter) {
 			return strings.ToLower(letter)
